@@ -6,6 +6,7 @@ describe(LikeWidgetComponent.name, () => {
   let fixture: ComponentFixture<LikeWidgetComponent> = null;
   let component: LikeWidgetComponent = null;
 
+  // compileComponents garante que o componente seja renderizado antes de rodar os testes
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [LikeWidgetModule]
@@ -19,6 +20,10 @@ describe(LikeWidgetComponent.name, () => {
     expect(component).toBeTruthy();
   });
 
+   /*
+   detectChanges faz com que o ciclo de vida do componente seja executado, fazendo
+   com que a fase OnInit seja processada.
+  */
   it('Should auto-generate ID during ngOnInit when (@Input id) is not assigned', () => {
     fixture.detectChanges();
     expect(component.id).toBeTruthy();
