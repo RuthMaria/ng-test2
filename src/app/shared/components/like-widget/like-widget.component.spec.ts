@@ -43,4 +43,46 @@ describe(LikeWidgetComponent.name, () => {
       component.like();
       expect(component.liked.emit).toHaveBeenCalled();
   });
+
+  /*
+   Em uma operação assíncrona é aconselhável usar o done() para indicar
+  que o teste foi finalizado.
+
+  o (D) indica que é um teste de UI, também chamado de teste de integração com o DOM.
+  Este tipo de teste é opcional para o desenvolvedor, pois não há nenhum relatório
+  de cobertura para testes de integração com o DOM, desta forma, não há nenhuma
+  métrica que force o desenvolvedor a realizar esse tipo de teste.
+  */
+  it(`(D) Should display number of likes when clicked`, done => {
+    fixture.detectChanges();
+    component.liked.subscribe(() => {
+      component.likes++;
+      fixture.detectChanges();
+      const counterEl: HTMLElement = fixture.nativeElement
+        .querySelector('.like-counter');
+      expect(counterEl.textContent.trim()).toBe('1');
+      done();
+    });
+    const likeWidgetContainerEl: HTMLElement = fixture.nativeElement
+      .querySelector('.like-widget-container');
+    likeWidgetContainerEl.click();
+  });
+
+  it(`(D) Should display number of likes when ENTER key is pressed`, done => {
+    fixture.detectChanges();
+
+    component.liked.subscribe(() => {
+      component.likes++;
+      fixture.detectChanges();
+      const counterEl: HTMLElement = fixture.nativeElement
+        .querySelector('.like-counter');
+      expect(counterEl.textContent.trim()).toBe('1');
+      done();
+    });
+
+    const likeWidgetContainerEl: HTMLElement = fixture.nativeElement
+      .querySelector('.like-widget-container');
+    const event = new KeyboardEvent('keyup', { key: 'Enter' });
+    likeWidgetContainerEl.dispatchEvent(event);
+  });
 });
