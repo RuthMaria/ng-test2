@@ -21,7 +21,10 @@ export class PhotoFrameComponent implements OnInit, OnDestroy {
       .asObservable() // transforma o debounceSubject em um observável para que possamos encadear operadores RxJS para manipular os eventos emitidos pelo debounceSubject.
       .pipe(debounceTime(500)) // cria um novo observável que emite um valor somente depois que passou um período de 500 milissegundos sem que nenhum novo valor seja emitido pelo observável anterior
       .pipe(takeUntil(this.unsubscribe)) // takeUntil(this.unsubscribe) permite que o observável seja encerrado quando um outro observável (this.unsubscribe) emite um valor, ou seja, eu destruo o debounceSubject e crio o unsubscribe para poder encerrá-lo no ngOnDestroy
-      .subscribe(() => this.liked.emit()); // se inscreve no observável resultante e emite o evento liked quando um evento é recebido pelo observável após passar pelo tempo de debounce.
+      .subscribe(() => {
+        this.likes++;
+        this.liked.emit() // se inscreve no observável resultante e emite o evento liked quando um evento é recebido pelo observável após passar pelo tempo de debounce.
+      });
   }
 
   public ngOnDestroy(): void {

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<testsuite name="Firefox 126.0 (Windows 10)" package="" timestamp="2024-05-24T14:37:27" id="0" hostname="edge" tests="28" errors="0" failures="0" time="2.232">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0"/>
+  </properties>
+  <testcase name="PhotoListComponent (D) Should display loader while waiting for data" time="0.042" classname="Firefox_126_0_(Windows_10).PhotoListComponent"/>
+  <testcase name="PhotoListComponent (D) Should display board when data arrives" time="0.024" classname="Firefox_126_0_(Windows_10).PhotoListComponent"/>
+  <testcase name="PhotoListComponent Should create component" time="0.006" classname="Firefox_126_0_(Windows_10).PhotoListComponent"/>
+  <testcase name="PhotoListComponent Mock Provider (D) Should display board when data arrives" time="0.016" classname="Firefox_126_0_(Windows_10).PhotoListComponent Mock Provider"/>
+  <testcase name="PhotoListComponent Mock Provider Should create component" time="0.004" classname="Firefox_126_0_(Windows_10).PhotoListComponent Mock Provider"/>
+  <testcase name="PhotoBoardComponent outros Should display rows and columns when (@Input photos) has value" time="0.014" classname="Firefox_126_0_(Windows_10).PhotoBoardComponent outros"/>
+  <testcase name="LikeWidgetComponent Should create component" time="0.006" classname="Firefox_126_0_(Windows_10).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent (D) Should display number of likes when ENTER key is pressed" time="0.005" classname="Firefox_126_0_(Windows_10).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent #like&#xA;    should trigger (@Output liked) when called" time="0.005" classname="Firefox_126_0_(Windows_10).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent Should NOT auto-generate ID during ngOnInit when (@Input id) is assigned" time="0.004" classname="Firefox_126_0_(Windows_10).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent Should auto-generate ID during ngOnInit when (@Input id) is not assigned" time="0.003" classname="Firefox_126_0_(Windows_10).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent (D) Should display number of likes when clicked" time="0.004" classname="Firefox_126_0_(Windows_10).LikeWidgetComponent"/>
+  <testcase name="PhotoBoardComponent Should display rows and columns when (@Input photos) has value" time="0.003" classname="Firefox_126_0_(Windows_10).PhotoBoardComponent"/>
+  <testcase name="PhotoBoardService #getPhotos should return&#xA;    photos with description in uppercase" time="2.058" classname="Firefox_126_0_(Windows_10).PhotoBoardService"/>
+  <testcase name="PhotoFrameComponent (D) Should display number of likes when (@Input likes) is incremented" time="0.003" classname="Firefox_126_0_(Windows_10).PhotoFrameComponent"/>
+  <testcase name="PhotoFrameComponent (D) Should have aria-label with 0 (@Input likes)" time="0.003" classname="Firefox_126_0_(Windows_10).PhotoFrameComponent"/>
+  <testcase name="PhotoFrameComponent (D) Should update aria-label when (@Input likes) is incremented" time="0.004" classname="Firefox_126_0_(Windows_10).PhotoFrameComponent"/>
+  <testcase name="PhotoFrameComponent Should create component" time="0.003" classname="Firefox_126_0_(Windows_10).PhotoFrameComponent"/>
+  <testcase name="PhotoFrameComponent #like&#xA;    should trigger (@Output liked) two times when&#xA;    called outside debounce time" time="0.003" classname="Firefox_126_0_(Windows_10).PhotoFrameComponent"/>
+  <testcase name="PhotoFrameComponent #like&#xA;    should trigger (@Output liked) once when called&#xA;    multiple times within debounce time" time="0.005" classname="Firefox_126_0_(Windows_10).PhotoFrameComponent"/>
+  <testcase name="PhotoFrameComponent (D) Should display image with src and description when bound to properties" time="0.003" classname="Firefox_126_0_(Windows_10).PhotoFrameComponent"/>
+  <testcase name="ActionDirective (D) (@Output appAction) should emit event with payload when clicked" time="0.003" classname="Firefox_126_0_(Windows_10).ActionDirective"/>
+  <testcase name="ActionDirective (D) (@Output appAction) should emit event with payload when clicked or ENTER key pressed" time="0.007" classname="Firefox_126_0_(Windows_10).ActionDirective"/>
+  <testcase name="ActionDirective (D) (@Output appAction) should emit event with payload when ENTER key is pressed" time="0.002" classname="Firefox_126_0_(Windows_10).ActionDirective"/>
+  <testcase name="UniqueIdService #getNumberOfGeneratedUniqueIds&#xA;    should return the number of generatedIds when called" time="0.001" classname="Firefox_126_0_(Windows_10).UniqueIdService"/>
+  <testcase name="UniqueIdService #generateUniqueIdWithPrefix&#xA;    should not generate duplicate IDs when called multiple times" time="0" classname="Firefox_126_0_(Windows_10).UniqueIdService"/>
+  <testcase name="UniqueIdService #generateUniqueIdWithPrefix&#xA;    should throw when called with empty" time="0.001" classname="Firefox_126_0_(Windows_10).UniqueIdService"/>
+  <testcase name="UniqueIdService #generateUniqueIdWithPrefix&#xA;    should generate id when called with prefix" time="0" classname="Firefox_126_0_(Windows_10).UniqueIdService"/>
+  <system-out>
+    <![CDATA[
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>
